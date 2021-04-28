@@ -11,9 +11,11 @@ require (
 	github.com/jinzhu/now v1.1.1 // indirect
 	github.com/kellydunn/golang-geo v0.7.0
 	github.com/kylelemons/go-gypsy v1.0.0 // indirect
+	github.com/labstack/echo/v4 v4.2.2
 	github.com/nickdu2009/copier v0.0.0-20201028122252-1583596e0d06
 	github.com/pkg/errors v0.9.1
 	github.com/satori/go.uuid v1.2.0
 	github.com/shopspring/decimal v1.2.0
+	github.com/speps/go-hashids v2.0.0+incompatible
 	github.com/ziutek/mymysql v1.5.4 // indirect
 )
