@@ -154,6 +154,7 @@ func main() {
 	fmt.Println(user1.Money.Decimal())
 	fmt.Println(user1.Age)
 	fmt.Println(user1.Address)
+	fmt.Println(user1.Meta.Xxx == nil)
 
 	user1.Money = types.NewEntityDecimalFromInt64(1)
 	u1 := &ent.User{}
