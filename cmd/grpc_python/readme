@@ -1,0 +1,4 @@
+https://grpc.io/docs/languages/python/basics/
+
+➜  proto git:(master) python -m grpc_tools.protoc -I ./customer_account --python_out . --grpc_python_out . ./customer_account/customer_account_v2.proto
+➜  proto git:(master) ✗ python -m grpc_tools.protoc -I ./customer_account --python_out . --grpc_python_out . ./customer_account/common_v2.proto

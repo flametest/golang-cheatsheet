@@ -135,7 +135,7 @@ func (af *ActivationForm) BackImages() Photos {
 }
 
 func main() {
-	af, err := NewActivationForm([]*Photo{NewPhoto("fxx")} ,[]*Photo{NewPhoto("bxx")}, NewBranch("c", "s"))
+	af, err := NewActivationForm([]*Photo{NewPhoto("fxx")} , NewPhotos([]string{"bxx"}), NewBranch("c", "s"))
 	if err != nil{
 		fmt.Println(err)
 	}

@@ -18,9 +18,21 @@ func GenerateRandomBytes(n int) ([]byte, error) {
 }
 
 func GenerateRandomString(n int) (string, error) {
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	b, err := GenerateRandomBytes(n)
 	return base64.URLEncoding.EncodeToString(b), err
+}
+
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+
+func GetRandString(length int) string {
+	rand.Seed(time.Now().UnixNano())
+	s := make([]rune, length)
+	for i := 0; i < length; i++ {
+		idx := rand.Intn(len(letters))
+		s[i] = rune(letters[idx])
+	}
+	return string(s)
 }
 
 func main() {
@@ -29,6 +41,8 @@ func main() {
 		fmt.Println(err)
 	}
 	fmt.Println(s)
+	fmt.Println(GetRandString(6))
+	fmt.Println(time.Time{}.Unix())
 }
 
 
