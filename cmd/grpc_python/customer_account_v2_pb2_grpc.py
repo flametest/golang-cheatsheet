@@ -24,6 +24,11 @@ class CustomerAccountStub(object):
                 request_serializer=customer__account__v2__pb2.UpdateUserRequest.SerializeToString,
                 response_deserializer=customer__account__v2__pb2.UpdateUserResponse.FromString,
                 )
+        self.DeleteUser = channel.unary_unary(
+                '/igloo.customer_account.CustomerAccount/DeleteUser',
+                request_serializer=customer__account__v2__pb2.DeleteUserRequest.SerializeToString,
+                response_deserializer=customer__account__v2__pb2.DeleteUserResponse.FromString,
+                )
         self.GetUserByID = channel.unary_unary(
                 '/igloo.customer_account.CustomerAccount/GetUserByID',
                 request_serializer=customer__account__v2__pb2.GetUserByIDRequest.SerializeToString,
@@ -81,6 +86,12 @@ class CustomerAccountServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def UpdateUser(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def DeleteUser(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -152,6 +163,11 @@ def add_CustomerAccountServicer_to_server(servicer, server):
                     servicer.UpdateUser,
                     request_deserializer=customer__account__v2__pb2.UpdateUserRequest.FromString,
                     response_serializer=customer__account__v2__pb2.UpdateUserResponse.SerializeToString,
+            ),
+            'DeleteUser': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteUser,
+                    request_deserializer=customer__account__v2__pb2.DeleteUserRequest.FromString,
+                    response_serializer=customer__account__v2__pb2.DeleteUserResponse.SerializeToString,
             ),
             'GetUserByID': grpc.unary_unary_rpc_method_handler(
                     servicer.GetUserByID,
@@ -239,6 +255,23 @@ class CustomerAccount(object):
         return grpc.experimental.unary_unary(request, target, '/igloo.customer_account.CustomerAccount/UpdateUser',
             customer__account__v2__pb2.UpdateUserRequest.SerializeToString,
             customer__account__v2__pb2.UpdateUserResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteUser(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/igloo.customer_account.CustomerAccount/DeleteUser',
+            customer__account__v2__pb2.DeleteUserRequest.SerializeToString,
+            customer__account__v2__pb2.DeleteUserResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 

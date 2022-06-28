@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 import common_v2_pb2 as common__v2__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19\x63ustomer_account_v2.proto\x12\x16igloo.customer_account\x1a\x0f\x63ommon_v2.proto\"%\n\x12GetUserByIDRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"1\n\x1aGetUserByExternalIDRequest\x12\x13\n\x0b\x65xternal_id\x18\x01 \x01(\t\"?\n\x11\x43reateUserRequest\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"@\n\x12\x43reateUserResponse\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"?\n\x11UpdateUserRequest\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"@\n\x12UpdateUserResponse\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"6\n\x15GetUserByEmailRequest\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x0e\n\x06source\x18\x02 \x01(\t\"S\n\x15GetUserByPhoneRequest\x12\x0e\n\x06source\x18\x01 \x01(\t\x12\x14\n\x0cphone_number\x18\x02 \x01(\t\x12\x14\n\x0cphone_prefix\x18\x03 \x01(\t\"=\n\x0fGetUserResponse\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"j\n%GetOrCreateUserByAuthTypeTokenRequest\x12\x10\n\x08\x61uthType\x18\x01 \x01(\t\x12\x11\n\tauthToken\x18\x02 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\x12\x0b\n\x03\x61pp\x18\x04 \x01(\t\"T\n&GetOrCreateUserByAuthTypeTokenResponse\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"(\n\x16GetUserJWTTokenRequest\x12\x0e\n\x06userId\x18\x01 \x01(\t\"+\n\x17GetUserJWTTokenResponse\x12\x10\n\x08jwtToken\x18\x01 \x01(\t\"6\n\x16GenUserJWTTokenRequest\x12\x0b\n\x03\x65xp\x18\x01 \x01(\x03\x12\x0f\n\x07payload\x18\x02 \x01(\t\"+\n\x17GenUserJWTTokenResponse\x12\x10\n\x08jwtToken\x18\x01 \x01(\t\"2\n\x12GetUserMetaRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"E\n\x13GetUserMetaResponse\x12.\n\x04meta\x18\x01 \x01(\x0b\x32 .igloo.customer_account.UserMeta\"D\n\x12SetUserMetaRequest\x12.\n\x04meta\x18\x01 \x01(\x0b\x32 .igloo.customer_account.UserMeta\"5\n\x15\x44\x65leteUserMetaRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"\x0f\n\rEmptyResponse\")\n\x16GetUserFcmTokenRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"M\n\x17GetUserFcmTokenResponse\x12\x0e\n\x06source\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x11\n\tfcm_token\x18\x03 \x01(\t2\xa1\t\n\x0f\x43ustomerAccount\x12\x63\n\nCreateUser\x12).igloo.customer_account.CreateUserRequest\x1a*.igloo.customer_account.CreateUserResponse\x12\x63\n\nUpdateUser\x12).igloo.customer_account.UpdateUserRequest\x1a*.igloo.customer_account.UpdateUserResponse\x12\x62\n\x0bGetUserByID\x12*.igloo.customer_account.GetUserByIDRequest\x1a\'.igloo.customer_account.GetUserResponse\x12r\n\x13GetUserByExternalID\x12\x32.igloo.customer_account.GetUserByExternalIDRequest\x1a\'.igloo.customer_account.GetUserResponse\x12h\n\x0eGetUserByEmail\x12-.igloo.customer_account.GetUserByEmailRequest\x1a\'.igloo.customer_account.GetUserResponse\x12h\n\x0eGetUserByPhone\x12-.igloo.customer_account.GetUserByPhoneRequest\x1a\'.igloo.customer_account.GetUserResponse\x12r\n\x0fGenUserJWTToken\x12..igloo.customer_account.GenUserJWTTokenRequest\x1a/.igloo.customer_account.GenUserJWTTokenResponse\x12\x66\n\x0bGetUserMeta\x12*.igloo.customer_account.GetUserMetaRequest\x1a+.igloo.customer_account.GetUserMetaResponse\x12`\n\x0bSetUserMeta\x12*.igloo.customer_account.SetUserMetaRequest\x1a%.igloo.customer_account.EmptyResponse\x12\x66\n\x0e\x44\x65leteUserMeta\x12-.igloo.customer_account.DeleteUserMetaRequest\x1a%.igloo.customer_account.EmptyResponse\x12r\n\x0fGetUserFcmToken\x12..igloo.customer_account.GetUserFcmTokenRequest\x1a/.igloo.customer_account.GetUserFcmTokenResponseB9Z7gitlab.com/axinan/backend/common/proto/customer_accountb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19\x63ustomer_account_v2.proto\x12\x16igloo.customer_account\x1a\x0f\x63ommon_v2.proto\"%\n\x12GetUserByIDRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"1\n\x1aGetUserByExternalIDRequest\x12\x13\n\x0b\x65xternal_id\x18\x01 \x01(\t\"?\n\x11\x43reateUserRequest\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"@\n\x12\x43reateUserResponse\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"?\n\x11UpdateUserRequest\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"@\n\x12UpdateUserResponse\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"$\n\x11\x44\x65leteUserRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"\x14\n\x12\x44\x65leteUserResponse\"6\n\x15GetUserByEmailRequest\x12\r\n\x05\x65mail\x18\x01 \x01(\t\x12\x0e\n\x06source\x18\x02 \x01(\t\"S\n\x15GetUserByPhoneRequest\x12\x0e\n\x06source\x18\x01 \x01(\t\x12\x14\n\x0cphone_number\x18\x02 \x01(\t\x12\x14\n\x0cphone_prefix\x18\x03 \x01(\t\"=\n\x0fGetUserResponse\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"j\n%GetOrCreateUserByAuthTypeTokenRequest\x12\x10\n\x08\x61uthType\x18\x01 \x01(\t\x12\x11\n\tauthToken\x18\x02 \x01(\t\x12\x0f\n\x07\x63ountry\x18\x03 \x01(\t\x12\x0b\n\x03\x61pp\x18\x04 \x01(\t\"T\n&GetOrCreateUserByAuthTypeTokenResponse\x12*\n\x04user\x18\x01 \x01(\x0b\x32\x1c.igloo.customer_account.User\"(\n\x16GetUserJWTTokenRequest\x12\x0e\n\x06userId\x18\x01 \x01(\t\"+\n\x17GetUserJWTTokenResponse\x12\x10\n\x08jwtToken\x18\x01 \x01(\t\"6\n\x16GenUserJWTTokenRequest\x12\x0b\n\x03\x65xp\x18\x01 \x01(\x03\x12\x0f\n\x07payload\x18\x02 \x01(\t\"+\n\x17GenUserJWTTokenResponse\x12\x10\n\x08jwtToken\x18\x01 \x01(\t\"2\n\x12GetUserMetaRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"E\n\x13GetUserMetaResponse\x12.\n\x04meta\x18\x01 \x01(\x0b\x32 .igloo.customer_account.UserMeta\"D\n\x12SetUserMetaRequest\x12.\n\x04meta\x18\x01 \x01(\x0b\x32 .igloo.customer_account.UserMeta\"5\n\x15\x44\x65leteUserMetaRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\x12\x0b\n\x03key\x18\x02 \x01(\t\"\x0f\n\rEmptyResponse\")\n\x16GetUserFcmTokenRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\t\"M\n\x17GetUserFcmTokenResponse\x12\x0e\n\x06source\x18\x01 \x01(\t\x12\x0f\n\x07user_id\x18\x02 \x01(\t\x12\x11\n\tfcm_token\x18\x03 \x01(\t2\x86\n\n\x0f\x43ustomerAccount\x12\x63\n\nCreateUser\x12).igloo.customer_account.CreateUserRequest\x1a*.igloo.customer_account.CreateUserResponse\x12\x63\n\nUpdateUser\x12).igloo.customer_account.UpdateUserRequest\x1a*.igloo.customer_account.UpdateUserResponse\x12\x63\n\nDeleteUser\x12).igloo.customer_account.DeleteUserRequest\x1a*.igloo.customer_account.DeleteUserResponse\x12\x62\n\x0bGetUserByID\x12*.igloo.customer_account.GetUserByIDRequest\x1a\'.igloo.customer_account.GetUserResponse\x12r\n\x13GetUserByExternalID\x12\x32.igloo.customer_account.GetUserByExternalIDRequest\x1a\'.igloo.customer_account.GetUserResponse\x12h\n\x0eGetUserByEmail\x12-.igloo.customer_account.GetUserByEmailRequest\x1a\'.igloo.customer_account.GetUserResponse\x12h\n\x0eGetUserByPhone\x12-.igloo.customer_account.GetUserByPhoneRequest\x1a\'.igloo.customer_account.GetUserResponse\x12r\n\x0fGenUserJWTToken\x12..igloo.customer_account.GenUserJWTTokenRequest\x1a/.igloo.customer_account.GenUserJWTTokenResponse\x12\x66\n\x0bGetUserMeta\x12*.igloo.customer_account.GetUserMetaRequest\x1a+.igloo.customer_account.GetUserMetaResponse\x12`\n\x0bSetUserMeta\x12*.igloo.customer_account.SetUserMetaRequest\x1a%.igloo.customer_account.EmptyResponse\x12\x66\n\x0e\x44\x65leteUserMeta\x12-.igloo.customer_account.DeleteUserMetaRequest\x1a%.igloo.customer_account.EmptyResponse\x12r\n\x0fGetUserFcmToken\x12..igloo.customer_account.GetUserFcmTokenRequest\x1a/.igloo.customer_account.GetUserFcmTokenResponseB9Z7gitlab.com/axinan/backend/common/proto/customer_accountb\x06proto3')
 
 
 
@@ -25,6 +25,8 @@ _CREATEUSERREQUEST = DESCRIPTOR.message_types_by_name['CreateUserRequest']
 _CREATEUSERRESPONSE = DESCRIPTOR.message_types_by_name['CreateUserResponse']
 _UPDATEUSERREQUEST = DESCRIPTOR.message_types_by_name['UpdateUserRequest']
 _UPDATEUSERRESPONSE = DESCRIPTOR.message_types_by_name['UpdateUserResponse']
+_DELETEUSERREQUEST = DESCRIPTOR.message_types_by_name['DeleteUserRequest']
+_DELETEUSERRESPONSE = DESCRIPTOR.message_types_by_name['DeleteUserResponse']
 _GETUSERBYEMAILREQUEST = DESCRIPTOR.message_types_by_name['GetUserByEmailRequest']
 _GETUSERBYPHONEREQUEST = DESCRIPTOR.message_types_by_name['GetUserByPhoneRequest']
 _GETUSERRESPONSE = DESCRIPTOR.message_types_by_name['GetUserResponse']
@@ -82,6 +84,20 @@ UpdateUserResponse = _reflection.GeneratedProtocolMessageType('UpdateUserRespons
   # @@protoc_insertion_point(class_scope:igloo.customer_account.UpdateUserResponse)
   })
 _sym_db.RegisterMessage(UpdateUserResponse)
+
+DeleteUserRequest = _reflection.GeneratedProtocolMessageType('DeleteUserRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEUSERREQUEST,
+  '__module__' : 'customer_account_v2_pb2'
+  # @@protoc_insertion_point(class_scope:igloo.customer_account.DeleteUserRequest)
+  })
+_sym_db.RegisterMessage(DeleteUserRequest)
+
+DeleteUserResponse = _reflection.GeneratedProtocolMessageType('DeleteUserResponse', (_message.Message,), {
+  'DESCRIPTOR' : _DELETEUSERRESPONSE,
+  '__module__' : 'customer_account_v2_pb2'
+  # @@protoc_insertion_point(class_scope:igloo.customer_account.DeleteUserResponse)
+  })
+_sym_db.RegisterMessage(DeleteUserResponse)
 
 GetUserByEmailRequest = _reflection.GeneratedProtocolMessageType('GetUserByEmailRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETUSERBYEMAILREQUEST,
@@ -212,38 +228,42 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _UPDATEUSERREQUEST._serialized_end=354
   _UPDATEUSERRESPONSE._serialized_start=356
   _UPDATEUSERRESPONSE._serialized_end=420
-  _GETUSERBYEMAILREQUEST._serialized_start=422
-  _GETUSERBYEMAILREQUEST._serialized_end=476
-  _GETUSERBYPHONEREQUEST._serialized_start=478
-  _GETUSERBYPHONEREQUEST._serialized_end=561
-  _GETUSERRESPONSE._serialized_start=563
-  _GETUSERRESPONSE._serialized_end=624
-  _GETORCREATEUSERBYAUTHTYPETOKENREQUEST._serialized_start=626
-  _GETORCREATEUSERBYAUTHTYPETOKENREQUEST._serialized_end=732
-  _GETORCREATEUSERBYAUTHTYPETOKENRESPONSE._serialized_start=734
-  _GETORCREATEUSERBYAUTHTYPETOKENRESPONSE._serialized_end=818
-  _GETUSERJWTTOKENREQUEST._serialized_start=820
-  _GETUSERJWTTOKENREQUEST._serialized_end=860
-  _GETUSERJWTTOKENRESPONSE._serialized_start=862
-  _GETUSERJWTTOKENRESPONSE._serialized_end=905
-  _GENUSERJWTTOKENREQUEST._serialized_start=907
-  _GENUSERJWTTOKENREQUEST._serialized_end=961
-  _GENUSERJWTTOKENRESPONSE._serialized_start=963
-  _GENUSERJWTTOKENRESPONSE._serialized_end=1006
-  _GETUSERMETAREQUEST._serialized_start=1008
-  _GETUSERMETAREQUEST._serialized_end=1058
-  _GETUSERMETARESPONSE._serialized_start=1060
-  _GETUSERMETARESPONSE._serialized_end=1129
-  _SETUSERMETAREQUEST._serialized_start=1131
-  _SETUSERMETAREQUEST._serialized_end=1199
-  _DELETEUSERMETAREQUEST._serialized_start=1201
-  _DELETEUSERMETAREQUEST._serialized_end=1254
-  _EMPTYRESPONSE._serialized_start=1256
-  _EMPTYRESPONSE._serialized_end=1271
-  _GETUSERFCMTOKENREQUEST._serialized_start=1273
-  _GETUSERFCMTOKENREQUEST._serialized_end=1314
-  _GETUSERFCMTOKENRESPONSE._serialized_start=1316
-  _GETUSERFCMTOKENRESPONSE._serialized_end=1393
-  _CUSTOMERACCOUNT._serialized_start=1396
-  _CUSTOMERACCOUNT._serialized_end=2581
+  _DELETEUSERREQUEST._serialized_start=422
+  _DELETEUSERREQUEST._serialized_end=458
+  _DELETEUSERRESPONSE._serialized_start=460
+  _DELETEUSERRESPONSE._serialized_end=480
+  _GETUSERBYEMAILREQUEST._serialized_start=482
+  _GETUSERBYEMAILREQUEST._serialized_end=536
+  _GETUSERBYPHONEREQUEST._serialized_start=538
+  _GETUSERBYPHONEREQUEST._serialized_end=621
+  _GETUSERRESPONSE._serialized_start=623
+  _GETUSERRESPONSE._serialized_end=684
+  _GETORCREATEUSERBYAUTHTYPETOKENREQUEST._serialized_start=686
+  _GETORCREATEUSERBYAUTHTYPETOKENREQUEST._serialized_end=792
+  _GETORCREATEUSERBYAUTHTYPETOKENRESPONSE._serialized_start=794
+  _GETORCREATEUSERBYAUTHTYPETOKENRESPONSE._serialized_end=878
+  _GETUSERJWTTOKENREQUEST._serialized_start=880
+  _GETUSERJWTTOKENREQUEST._serialized_end=920
+  _GETUSERJWTTOKENRESPONSE._serialized_start=922
+  _GETUSERJWTTOKENRESPONSE._serialized_end=965
+  _GENUSERJWTTOKENREQUEST._serialized_start=967
+  _GENUSERJWTTOKENREQUEST._serialized_end=1021
+  _GENUSERJWTTOKENRESPONSE._serialized_start=1023
+  _GENUSERJWTTOKENRESPONSE._serialized_end=1066
+  _GETUSERMETAREQUEST._serialized_start=1068
+  _GETUSERMETAREQUEST._serialized_end=1118
+  _GETUSERMETARESPONSE._serialized_start=1120
+  _GETUSERMETARESPONSE._serialized_end=1189
+  _SETUSERMETAREQUEST._serialized_start=1191
+  _SETUSERMETAREQUEST._serialized_end=1259
+  _DELETEUSERMETAREQUEST._serialized_start=1261
+  _DELETEUSERMETAREQUEST._serialized_end=1314
+  _EMPTYRESPONSE._serialized_start=1316
+  _EMPTYRESPONSE._serialized_end=1331
+  _GETUSERFCMTOKENREQUEST._serialized_start=1333
+  _GETUSERFCMTOKENREQUEST._serialized_end=1374
+  _GETUSERFCMTOKENRESPONSE._serialized_start=1376
+  _GETUSERFCMTOKENRESPONSE._serialized_end=1453
+  _CUSTOMERACCOUNT._serialized_start=1456
+  _CUSTOMERACCOUNT._serialized_end=2742
 # @@protoc_insertion_point(module_scope)
