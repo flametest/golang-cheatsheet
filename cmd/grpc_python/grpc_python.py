@@ -4,10 +4,14 @@ import grpc
 import customer_account_v2_pb2
 import customer_account_v2_pb2_grpc
 
-customer_id = "4633ee97-1892-4a82-8883-618a2d9d7fad"
+customer_id = "df013a7b-9995-4502-ad1a-a7b0a64792e2"
 
 channel = grpc.insecure_channel('customer-account.prod.svc.cluster.local:9000')
 stub = customer_account_v2_pb2_grpc.CustomerAccountStub(channel)
+# r = stub.DeleteUser(customer_account_v2_pb2.DeleteUserRequest(
+#     user_id=customer_id
+# ))
+# print(r)
 r = stub.GetUserByID(customer_account_v2_pb2.GetUserByIDRequest(
     user_id=customer_id,
 ))

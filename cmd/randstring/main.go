@@ -43,6 +43,12 @@ func main() {
 	fmt.Println(s)
 	fmt.Println(GetRandString(6))
 	fmt.Println(time.Time{}.Unix())
+	var a []*string
+	a = nil
+	b := "a"
+	fmt.Println(a)
+	a = append(a, &b)
+	fmt.Println(a)
 }
 
 
