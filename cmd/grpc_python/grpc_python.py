@@ -4,7 +4,7 @@ import grpc
 import customer_account_v2_pb2
 import customer_account_v2_pb2_grpc
 
-customer_id = "df013a7b-9995-4502-ad1a-a7b0a64792e2"
+customer_id = "a3845c5c-5a03-4551-be6d-49e07d63a201"
 
 channel = grpc.insecure_channel('customer-account.prod.svc.cluster.local:9000')
 stub = customer_account_v2_pb2_grpc.CustomerAccountStub(channel)

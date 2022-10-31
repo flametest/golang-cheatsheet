@@ -4,6 +4,7 @@ import (
 	"encoding/base64"
 	"fmt"
 	"math/rand"
+	"sort"
 	"time"
 )
 
@@ -36,7 +37,7 @@ func GetRandString(length int) string {
 }
 
 func main() {
-	s, err := GenerateRandomString(16)
+	s, err := GenerateRandomString(112)
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -49,6 +50,9 @@ func main() {
 	fmt.Println(a)
 	a = append(a, &b)
 	fmt.Println(a)
+	keyList := []string{"foo", "foo_bar"}
+	sort.Strings(keyList)
+	fmt.Println(keyList)
 }
 
 
