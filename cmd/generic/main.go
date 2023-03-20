@@ -20,5 +20,4 @@ func main() {
         fmt.Println(s)
     }
     fmt.Println(time.Now().Unix())
-    time.Uni
 }

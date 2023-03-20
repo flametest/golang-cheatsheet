@@ -18,4 +18,8 @@ func main() {
 	//fmt.Println("result")
 	//fmt.Println(string(strings.TrimSpace(result)))
 
+	vnPhonePattern := "\\((0|\\+84)\\)\\d+"
+	re = regexp.MustCompile(vnPhonePattern)
+	fmt.Println(re.MatchString("(0)983280987"))
+	fmt.Println(re.MatchString("(+84)983280987"))
 }

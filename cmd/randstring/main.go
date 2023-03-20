@@ -1,10 +1,13 @@
 package main
 
 import (
+	"crypto/md5"
 	"encoding/base64"
 	"fmt"
 	"math/rand"
 	"sort"
+	"strconv"
+	"strings"
 	"time"
 )
 
@@ -53,6 +56,14 @@ func main() {
 	keyList := []string{"foo", "foo_bar"}
 	sort.Strings(keyList)
 	fmt.Println(keyList)
+	cx := md5.New().Sum([]byte(strconv.FormatInt(time.Now().UnixNano(), 10)))
+	fmt.Println(base64.StdEncoding.EncodeToString(cx))
+	prefix := "60"
+	userPhone := "+60194562610"
+	if strings.Contains(userPhone, "+") {
+		userPhone = strings.TrimPrefix(userPhone, "+"+prefix)
+	}
+	fmt.Println(userPhone)
 }
 
 
